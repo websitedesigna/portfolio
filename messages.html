@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Messages</title>
+    <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+    <section class="messages-section" id="adminSection" style="display:none;">
+        <h1>Submitted Messages</h1>
+        <div id="messagesContainer" class="messages-container"></div>
+        <a href="index.html" class="back-button">← Back</a>
+    </section>
+
+    <script src="messages.js"></script>
+    <script>
+        const adminPassword = "supersecure123"; // <-- Change this password
+
+        const enteredPassword = prompt("🔐 Enter Admin Password:");
+
+        if (enteredPassword === adminPassword) {
+            document.getElementById("adminSection").style.display = "block";
+        } else {
+            alert("⛔ Access Denied!");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

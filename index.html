@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <img class="logo" src="images/logo.png" alt="Riley's Portfolio Logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="home">
+            <div class="particles"></div>
+            <h1 class="glitch" data-text="Welcome to Riley's Portfolio">Welcome to Riley's Portfolio <span class="neon">✨</span></h1>
+            <p class="tagline">Your one-stop solution for web development and design.</p>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="section-title">💻 My Projects</h2>
+        <div class="projects-grid">
+            <a href="https://beautifulboos.com" target="_blank" class="project-card" data-color="#ff00ff">
+                <div class="card-inner">
+                    <div class="card-front card-content">
+                        <h3>Beautiful Boos</h3>
+                        <p>Custom website built for Beautiful Boos, showcasing their products and services.</p>
+                        <a href="https://beautifulboos.com" target="_blank" class="btn">View Website</a>
+                    </div>
+                    <div class="card-back">
+                        <p>Extra info or screenshot here!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://websitedesigna.github.io/davesfamilybutchers" target="_blank" class="project-card" data-color="#00ffff">
+                <div class="card-inner">
+                    <div class="card-front card-content">
+                        <h3>Daves Family Butchers</h3>
+                        <p>Website created for a local butcher, highlighting their products and online presence.</p>
+                        <a href="https://websitedesigna.github.io/davesfamilybutchers" target="_blank" class="btn">View Website</a>
+                    </div>
+                    <div class="card-back">
+                        <p>Extra info or screenshot here!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cursor-glow"></div>
+    </section>
+    <section class="pricing" id="pricing">
+        <h2 class="section-title">💎 Pricing Plans</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card" data-color="#00ffff">
+                <h3>Basic Site</h3>
+                <p class="price">From £99.99</p>
+                <ul>
+                    <li>1-page personal website</li>
+                    <li>All essential features</li>
+                    <li>Responsive design</li>
+                </ul>
+                <label class="neon-checkbox">
+                    <input type="checkbox">
+                    <span>Include optional maintenance</span>
+                </label>
+                <p class="monthly">Optional Maintenance: £25/mo</p>
+                <a href="#" class="btn">Select Plan</a>
+            </div>
+            <div class="pricing-card" data-color="#ff00ff">
+                <h3>Small Business Site</h3>
+                <p class="price">From £149.99</p>
+                <ul>
+                    <li>Multi-page website</li>
+                    <li>Everything you need for a professional business site</li>
+                    <li>Responsive & SEO-ready</li>
+                </ul>
+                <label class="neon-checkbox">
+                    <input type="checkbox">
+                    <span>Include optional maintenance</span>
+                </label>
+                <p class="monthly">Optional Maintenance: £35/mo</p>
+                <a href="#" class="btn">Select Plan</a>
+            </div>
+            <div class="pricing-card" data-color="#ffff00">
+                <h3>E-commerce Store</h3>
+                <p class="price">From £199.99</p>
+                <ul>
+                    <li>Full online store setup</li>
+                    <li>Payment integration & product catalog</li>
+                    <li>Mobile-friendly & secure</li>
+                </ul>
+                <label class="neon-checkbox">
+                    <input type="checkbox">
+                    <span>Include optional maintenance</span>
+                </label>
+                <p class="monthly">Optional Maintenance: £40/mo</p>
+                <a href="#contact" class="btn">Select Plan</a>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2 class="section-title">👨‍💻 About Me</h2>
+        <div class="about-content">
+            <img src="images/logo.png" alt="Riley's Profile Picture" class="profile-pic">
+            <div class="about-text">
+                <p id="typing-text"></p>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="section-title">📞 Contact Me</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input placeholder="Enter your name" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input placeholder="Enter your email" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input placeholder="Enter your phone number (optional)" type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="plan">Select a Plan:</label>
+                <select id="plan" name="plan" required>
+                    <option value="" disabled selected>Select your plan</option>
+                    <option value="basic">Basic Plan — £99.99</option>
+                    <option value="standard">Standard Plan — £149.99</option>
+                    <option value="premium">Premium Plan — £199.99</option>
+                    <option value="custom">Custom Plan — Contact for Pricing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="maintenance">Add Maintenance Plan</label>
+                <input type="checkbox" id="maintenance" name="maintenance">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea placeholder="Enter your message. Please include what you would like on your website." id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Riley's Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
