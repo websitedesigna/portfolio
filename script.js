@@ -423,27 +423,7 @@ window.addEventListener('resize', resizeAboutCanvas)
   })
 })()
 
-const form = document.getElementById('popup-form');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const name = form.querySelector('input[type="text"]').value.trim();
-  const email = form.querySelector('input[type="email"]').value.trim();
-  const message = form.querySelector('textarea').value.trim();
-
-  const messages = JSON.parse(localStorage.getItem('messages')) || [];
-  messages.push({
-    name,
-    email,
-    message,
-    date: new Date().toLocaleString()
-  });
-
-  localStorage.setItem('messages', JSON.stringify(messages));
-
-  form.reset();
-  alert('Message sent successfully!');
-});
 
 const contactSection = document.getElementById('Contact');
 
@@ -457,5 +437,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 
 observer.observe(contactSection);
+
 
 
